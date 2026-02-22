@@ -14,8 +14,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     <TypeReveal delay={0.1}>
       <div className="relative bg-surface-raised border border-border overflow-hidden">
         {/* Title bar */}
-        <div className="flex items-center justify-between px-4 py-2.5 border-b border-border">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between px-4 py-2.5 border-b border-border gap-2 min-w-0">
+          <div className="flex items-center gap-2 shrink-0">
             <div className="flex gap-1.5">
               <span className="w-2 h-2 rounded-full bg-text-muted/25" />
               <span className="w-2 h-2 rounded-full bg-text-muted/25" />
@@ -23,17 +23,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </div>
             <span className="text-xs text-text-muted">~/{project.id}</span>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 min-w-0">
             {project.links.map((link) => (
               <a
                 key={link.url}
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[11px] text-text-muted hover:text-accent transition-colors inline-flex items-center gap-1"
+                className="text-[11px] text-text-muted hover:text-accent transition-colors inline-flex items-center gap-1 truncate"
               >
-                {link.url.replace('https://', '')}
-                <ExternalLink size={10} />
+                {link.label}
+                <ExternalLink size={10} className="shrink-0" />
               </a>
             ))}
           </div>
