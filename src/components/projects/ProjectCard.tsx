@@ -23,18 +23,20 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </div>
             <span className="text-xs text-text-muted">~/{project.id}</span>
           </div>
-          {project.links.map((link) => (
-            <a
-              key={link.url}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[11px] text-text-muted hover:text-accent transition-colors inline-flex items-center gap-1"
-            >
-              {link.url.replace('https://', '')}
-              <ExternalLink size={10} />
-            </a>
-          ))}
+          <div className="flex items-center gap-3">
+            {project.links.map((link) => (
+              <a
+                key={link.url}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] text-text-muted hover:text-accent transition-colors inline-flex items-center gap-1"
+              >
+                {link.url.replace('https://', '')}
+                <ExternalLink size={10} />
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Filename tabs */}

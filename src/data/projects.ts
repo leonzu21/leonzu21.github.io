@@ -16,6 +16,7 @@ export const projects: Project[] = [
     ],
     links: [
       { label: 'Live Site', url: 'https://steam-mordecai.vercel.app' },
+      { label: 'GitHub', url: 'https://github.com/leonzu21/steam-mordecai' },
     ],
     featured: true,
   },
