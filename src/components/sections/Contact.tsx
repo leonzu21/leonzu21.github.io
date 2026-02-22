@@ -33,11 +33,11 @@ export default function Contact() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-baseline gap-4 px-3 py-2.5 -mx-3 text-sm hover:bg-surface-overlay/60 transition-colors"
+              className="flex items-baseline gap-4 px-3 py-2.5 -mx-3 text-sm hover:bg-surface-overlay/60 transition-colors min-w-0"
             >
               <span className="text-green/70">{'>'}</span>
               <span className="text-text-muted w-20 shrink-0">{link.label}</span>
-              <span className="text-text-secondary">{link.display}</span>
+              <span className="text-text-secondary truncate">{link.display}</span>
             </a>
           </TypeReveal>
         ))}
